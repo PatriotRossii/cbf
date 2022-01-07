@@ -33,8 +33,14 @@ include_directories(${ANTLR_CTarget_OUTPUT_DIR})
 
 set(SOURCES
 	src/main.cpp
+
+	src/codegenState.cpp
+	src/brainfuckState.cpp
 )
-set(HEADERS)
+set(HEADERS
+	include/codegenState.hpp
+	include/brainfuckState.hpp
+)
 
 # Now build our tools
 add_executable(${PROJECT_NAME}
@@ -42,7 +48,7 @@ add_executable(${PROJECT_NAME}
 	${SOURCES}
 	${ANTLR_CTarget_CXX_OUTPUTS}
 )
-target_include_directories(${PROJECT_NAME} PUBLIC .)
+target_include_directories(${PROJECT_NAME} PUBLIC . include/)
 
 # Find the libraries that correspond to the LLVM components
 # that we wish to use
