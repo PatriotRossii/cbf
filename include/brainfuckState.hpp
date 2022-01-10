@@ -8,10 +8,9 @@ namespace cbf {
 
 constexpr int CPU_SIZE = 30000;
 
-class BrainfuckState {
+struct BrainfuckState {
 	static llvm::GlobalVariable i;
 	static llvm::GlobalVariable cpu;
-public:
 	BrainfuckState();
 };
 

@@ -36,10 +36,15 @@ set(SOURCES
 
 	src/codegenState.cpp
 	src/brainfuckState.cpp
+
+	src/ast/advanceCellNode.cpp
 )
 set(HEADERS
 	include/codegenState.hpp
 	include/brainfuckState.hpp
+
+	include/ast/astNode.hpp
+	include/ast/advanceCellNode.hpp
 )
 
 # Now build our tools
